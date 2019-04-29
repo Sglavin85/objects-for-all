@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>One Object For All and All For One</title>
 </head>
+
 <body>
 
     <h1>What I found in the Junk Drawer</h1>
@@ -14,17 +16,49 @@
     <button id="btn-getCategoryDetails">Get Category Details</button>
     <div id="container"></div>
 
-    <h2>More Junk Categories</h2>
+    <h2>Add Junk to Drawer</h2>
     <fieldset>
+        <label for="categories">Category:</label>
+        <select name="categories" id="categories">
+        </select>
         <label for="junk__category">Name:</label>
         <input id="junk__category" class="junk__category" type="text" autofocus />
+        <button class="btn category__save" id="btn-saveCategory">SAVE JUNK</button>
     </fieldset>
 
-    <button class="btn category__save" id="btn-saveCategory">Save Junk Category</button>
+    <h2>Add a catergory</h2>
+    <fieldset>
+        <label for="addCategory">Name</label>
+        <input id="addCategory" type="text">
+        <button class="btn category__save" id="btn-saveNewCategory">SAVE</button>
+    </fieldset>
+
+
+    <br>
+    <br>
+    <br>
+
+    <h2>Add More Junk</h2>
+    <article>
+        <fieldset id="selectCategoryCont">
+            <h2>Select Category</h2>
+            <select name="CategoryId" id="categoryId">
+                <!-- <option value="Junk">Junk</option>
+                <option value="Category">Category</option>
+                <option value="Order">Order</option> -->
+            </select>
+        </fieldset>
+        <fieldset>
+            <input type="search" name="searchbar" id="addJunkBar">
+            <button id="addJunkButton">Submit</button>
+        </fieldset>
+    </article>
 
     <script src="scripts/dom-category.js"></script>
     <script src="scripts/dom-junk.js"></script>
-    <script src="scripts/main.js"></script>
     <script src="scripts/dbcalls.js"></script>
+    <script src="scripts/dbPost.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>
